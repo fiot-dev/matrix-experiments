@@ -1,0 +1,345 @@
+    1  ls
+    2  curl -sL https://deb.nodesource.com/setup_9.x | sudo -E bash -
+    3  sudo apt-get install -y nodejs
+    4  npm install -g dat
+    5  ls
+    6  vi index.html
+    7  pwd
+    8  ls
+    9  dat sync dat://d7f33f551a783bd178202fac5e45169dd7a80e7aba2ec3d1a996b35987f0a7bc/ ./row-001 &
+   10  dat clone dat://d7f33f551a783bd178202fac5e45169dd7a80e7aba2ec3d1a996b35987f0a7bc/ ./row-001
+   11  dat sync dat://d7f33f551a783bd178202fac5e45169dd7a80e7aba2ec3d1a996b35987f0a7bc/ ./row-001
+   12  ls
+   13  adduser dmytri
+   14  usermod -aG sudo dmytri
+   15  su - dmytri
+   16  sudo vi /etc/ssh/sshd_config
+   17  sudo systemctl reload sshd
+   18  ssh dmytri@104.131.53.226
+   19  exit
+   20  sudo apt-key add repo-key.asc
+   21  rm repo-key.asc
+   22  sudo vim /etc/apt/sources.list.d/synapse.list
+   23  sudo apt-get update
+   24  sudo apt-get install matrix-synapse
+   25  sudo vim /etc/matrix-synapse/homeserver.yaml 
+   26  sudo systemctl enable matrix-synapse.service
+   27  sudo systemctl statrt matrix-synapse.service
+   28  sudo systemctl start matrix-synapse.service
+   29  sudo vim /etc/matrix-synapse/homeserver.yaml 
+   30  ls
+   31  sudo systemctl stop matrix-synapse.service
+   32  sudo systemctl start matrix-synapse.service
+   33  sudo systemctl stop matrix-synapse.service
+   34  sudo systemctl status matrix-synapse.service
+   35  sudo vim /etc/matrix-synapse/homeserver.yaml 
+   36  sudo systemctl start matrix-synapse.service
+   37  sudo systemctl status matrix-synapse.service
+   38  sudo systemctl status matrix-synapse.service > runninglog
+   39  vi runninglog 
+   40  cd /etc/matrix-synapse
+   41  ls
+   42  cd conf.d/
+   43  ls
+   44  vi server_name.yaml 
+   45  cd ..
+   46  sudo vim /etc/matrix-synapse/homeserver.yaml 
+   47  sudo systemctl restart matrix-synapse.service
+   48  ls
+   49  rm test.pub
+   50  ls
+   51  exit
+   52  ls
+   53  rm parker.pub 
+   54  ls
+   55  touch don.txt
+   56  nano don.txt 
+   57  sudo ufw allow 8448
+   58  sudo ufw status
+   59  sudo add-apt-repository ppa:certbot/certbot
+   60  sudo apt-get update
+   61  sudo apt-get install python-certbot-nginx
+   62  suo vi /etc/nginx/sites-available/default
+   63  sudo vi /etc/nginx/sites-available/default
+   64  sudo certbot --nginx -d osorojo.org -d www.osorojo.org
+   65  sudo nginx -t
+   66  sudo systemctl reload nginx
+   67  sudo vi /etc/nginx/sites-available/default
+   68  sudo systemctl reload nginx
+   69  systemctl status nginx
+   70  sudo vi /etc/nginx/sites-available/default
+   71  cd /etc/nginx/sites-available/
+   72  ls
+   73  vi osorojo.org 
+   74  sudo ufw status
+   75  sudo systemctl reload nginx
+   76  suo ufw status
+   77  sudo ufw status
+   78  ls -lah
+   79  sudo ufw status
+   80  sudo ufw allow 'Nginx Full'
+   81  sudo ufw delte allow 'Nginx HTTP'
+   82  sudo ufw delete allow 'Nginx HTTP'
+   83  sudo ufw status
+   84  sudo certbox --nginx -d osorojo.org -d www.osorojo.org
+   85  sudo certbot --nginx -d osorojo.org -d www.osorojo.org
+   86  sudo certbox renew --dry-run
+   87  sudo certbot renew --dry-run
+   88  cd ~/
+   89  ls
+   90  sudo systemctl status matrix-synapse
+   91  cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1
+   92  sudo vi /etc/matrix-synapse/homeserver.yaml 
+   93  sudo systemctl restart matrix-synapse
+   94  sudo systemctl status matrix-synapse
+   95  register_new_matrix_user -c /etc/matrix-synapse/homeserver.yaml https://localhost:8448
+   96  sudo vi /etc/nginx/sites-available/osorojo.org 
+   97  sudo ln -s /etc/nginx/sites-available/osorojo.org /etc/nginx/sites-enabled/osorojo.org
+   98  sudo nginx -t
+   99  sudo systemctl reload nginx
+  100  sudo ufw allow 8448
+  101  sudo ufw status
+  102  sudo cp /etc/letsencrypt/live/osorojo.org/fullchain.pem /etc/matrix-synapse/fullchain.pem
+  103  sudo cp /etc/letsencrypt/live/osorojo.org/privkey.pem /etc/matrix-synapse/privkey.pem
+  104  sudo crontab -e
+  105  sudo vi /etc/matrix-synapse/homeserver.yaml 
+  106  sudo systemctl restart matrix-synapse
+  107  sudo systemctl status matrix-synapse
+  108  sudo systemctl restart matrix-synapse
+  109  sudo systemctl status matrix-synapse
+  110  ifconfig
+  111  ls
+  112  vi index.html 
+  113  ls
+  114  vi test.txt 
+  115  vi runninglog 
+  116  cd /var/www/html
+  117  ls
+  118  vi index.
+  119  vi index.html 
+  120  cd ..
+  121  ls
+  122  cd osorojo.org/
+  123  ls
+  124  cd html/
+  125  ls
+  126  vi index.html 
+  127  pwd
+  128  cd /etc/nginx/
+  129  ls
+  130  cd sites-enabled/
+  131  ls
+  132  vi osorojo.org 
+  133  cd /var/www/html/
+  134  ls
+  135  vi index.
+  136  vi index.html 
+  137  cd ..
+  138  ls
+  139  cd osorojo.org/
+  140  ls
+  141  cd html/
+  142  ls
+  143  vi index.html 
+  144  ifconfig
+  145  sudo systemctl status matrix-synapse
+  146  cd ~/
+  147  scp asine@habeo.net:parker.pub ./
+  148  history
+  149  ls
+  150  cat parker.pub >> .ssh/authorized_keys 
+  151  cd .ssh
+  152  vi authorized_keys 
+  153  ssh root@osorojo.orgls
+  154  cd ~/
+  155  ls
+  156  vi runninglog 
+  157  ls
+  158  sudo vi /etc/matrix-synapse/homeserver.yaml 
+  159  sudo systemctl enable matrix-synapse
+  160  sudo systemctl status matrix-synapse
+  161  sudo vi /etc/matrix-synapse/homeserver.yaml 
+  162  sudo systemctl restart matrix-synapse
+  163  sudo systemctl status matrix-synapse
+  164  curl http://osorojo.org/_matrix/key/v2/server/auto
+  165  sudo vi /etc/matrix-synapse/homeserver.yaml 
+  166  curl http://104.131.53.226:8448/_matrix/key/v2/server/auto
+  167  curl http://104.131.53.226/_matrix/key/v2/server/auto
+  168  curl http://osorojo.org/_matrix/key/v2/server/auto
+  169  sudo vi /etc/matrix-synapse/homeserver.yaml 
+  170  sudo systemctl restart matrix-synapse
+  171  sudo systemctl status matrix-synapse
+  172  curl http://osorojo.org/_matrix/key/v2/server/auto
+  173  sudo systemctl status matrix-synapse
+  174  register_new_matrix_user -c /etc/matrix-synapse/homeserver.yaml https://localhost:8448
+  175  sudo apt-get install coturn
+  176  sudo vi /etc/turnserver.conf 
+  177  pwgen -s 64 1
+  178  sudo apt-get install pwgen
+  179  pwgen -s 64 1 > secret.txt
+  180  vi secret.txt 
+  181  sudo vi /etc/turnserver.conf 
+  182  sudo ufw allow 3478
+  183  sudo ufw allow 5349
+  184  sudo ufw status
+  185  sudo vi /etc/matrix-synapse/homeserver.yaml 
+  186  ls
+  187  vi secret.txt 
+  188  vi don.txt 
+  189  sudo vi /etc/matrix-synapse/homeserver.yaml 
+  190  sudo systemctl restart matrix-synapse
+  191  sudo vi /etc/matrix-synapse/homeserver.yaml 
+  192  turnserver
+  193  sudo vi /etc/turnserver.conf 
+  194  turnserver
+  195  nohup turnserver &
+  196  netstat -tulpn
+  197  sudo apt-get install stun
+  198  sudo vi /etc/turnserver.conf 
+  199  ps
+  200  kill 2256
+  201  ps
+  202  nohup turnserver &
+  203  ls
+  204  vi nohup.out 
+  205  vi runninglog 
+  206  sudo turnadmin -a -u don -r osorojo.org -p turncat999
+  207  ps
+  208  kill 2319
+  209  ps
+  210  turnserver
+  211  turnserver -v
+  212  nohup turnserver &
+  213  sudo apt-get install stun
+  214  sudo apt-get install stun-server 
+  215  stun
+  216  stun osorojo.org
+  217  stun pvos.org
+  218  stun osorojo.org
+  219  sudo systemctl restart matrix-synapse
+  220  sudo systemctl status matrix-synapse
+  221  sudo vi /etc/matrix-synapse/homeserver.yaml 
+  222  ls
+  223  ps
+  224  top
+  225  history
+  226  stuon osorojo.org
+  227  stun osorojo.org
+  228  ps -ef | grep "turnserver"
+  229  kill 2370
+  230  ps -ef | grep "turnserver"
+  231  ls
+  232  nohup turnserver &
+  233  ls
+  234  vi nohup.out 
+  235  ps
+  236  kill 3320
+  237  turnserver -o
+  238  turnserver
+  239  man turnserver
+  240  turnserver -v
+  241  ps
+  242  nohup turnserver &
+  243  ls
+  244  sudo systemctl status matrix-synapse
+  245  ls
+  246  ps -ef | grep nohup
+  247  ps
+  248  ps -ef | grep coturn
+  249  vi nohup.out 
+  250  vi runninglog 
+  251  ls
+  252  vi /etc/turnserver.conf 
+  253  sudo vi /etc/matrix-synapse/homeserver.yaml 
+  254  top
+  255  ps -ef |grep nohup
+  256  nohup turnserver -o&
+  257  ps
+  258  turnserver
+  259  nohup turnserver&
+  260  ps
+  261  sudo vi /etc/matrix-synapse/homeserver.yaml 
+  262  ls /etc/letsencrypt/
+  263  more /etc/letsencrypt/live/example.com/fullchain.pem
+  264  more /etc/letsencrypt/live/osorojo.org/fullchain.pem
+  265  vi /etc/turnserver.conf 
+  266  history
+  267  sudo systemctl restart matrix-synapse
+  268  ps
+  269  kill 11040
+  270  nohup turnserver&
+  271  sudo systemctl restart matrix-synapse
+  272  sudo systemctl status matrix-synapse
+  273  vi /etc/turnserver.conf 
+  274  ps
+  275  kill 11086
+  276  turnserver 
+  277  ps
+  278  nohup turnserver&
+  279  sudo systemctl restart matrix-synapse
+  280  ps
+  281  kill 11128
+  282  vi /etc/turnserver.conf 
+  283  sudo vi /etc/matrix-synapse/homeserver.yaml 
+  284  ps
+  285  sudo systemctl start coturn
+  286  sudo systemctl status coturn
+  287  sudo systemctl restart matrix-synapse 
+  288  vi /etc/turnserver.conf 
+  289  sudo systemctl restart coturn
+  290  sudo systemctl status coturn
+  291  sudo systemctl restart coturn
+  292  sudo systemctl status coturn
+  293  sudo systemctl restart matrix-synapse 
+  294  vi /etc/turnserver.conf 
+  295  sudo vi /etc/matrix-synapse/homeserver.yaml 
+  296  vi /etc/turnserver.conf
+  297  sudo systemctl restart coturn
+  298  sudo systemctl restart matrix-synapse 
+  299  vi /etc/turnserver.conf
+  300  sudo vi /etc/matrix-synapse/homeserver.yaml 
+  301  sudo systemctl restart coturn
+  302  sudo systemctl status coturn
+  303  sudo systemctl stop coturn
+  304  coturn
+  305  turnserver
+  306  vi /etc/turnserver.conf
+  307  nohup turnserver&
+  308  ps
+  309  sudo systemctl restart matrix-synapse 
+  310  sudo vi /etc/matrix-synapse/homeserver.yaml 
+  311  vi /etc/turnserver.conf
+  312  netstat -nap | grep 3478
+  313  sudo ufw status
+  314  vi /etc/turnserver.conf
+  315  sudo vi /etc/matrix-synapse/homeserver.yaml 
+  316  vi /etc/turnserver.conf
+  317  netstat -tulpn
+  318  vi /etc/turnserver.conf
+  319  sudo vi /etc/matrix-synapse/homeserver.yaml 
+  320  ps
+  321  kill 11430
+  322  nohup turnserver&
+  323  sudo systemctl restart matrix-synapse 
+  324  vi /etc/turnserver.conf
+  325  ps
+  326  kill 11482
+  327  sudo systemctl stop matrix-synapse 
+  328  sudo systemctl restart matrix-synapse 
+  329  ps
+  330  history
+  331  ps -ef |grep nohup
+  332  ps -ef |grep turnserver
+  333  vi /etc/turnserver.conf
+  334  iptables -A INPUT -p udp --dport 3478 -j ACCEPT
+  335  lsof -n i4TCP:3478 | grep LISTEN
+  336  lsof -n -i4TCP:3478 | grep LISTEN
+  337  lsof -n -i4TCP:5349 | grep LISTEN
+  338  sudo ufw status
+  339  history
+  340  netstat -tulpn
+  341  ps
+  342  nohup turnserver&
+  343  netstat -tulpn
+  344  sudo systemctl restart matrix-synapse 
+  345  history > success_history.txt
