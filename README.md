@@ -84,4 +84,5 @@ https://www.linux.com/blog/3-ways-run-remote-desktop-raspberry-pi
 
 https://frillip.com/using-your-raspberry-pi-3-as-a-wifi-access-point-with-hostapd/
 
+https://learn.adafruit.com/setting-up-a-raspberry-pi-as-a-wifi-access-point/install-software
 
